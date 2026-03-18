@@ -1,7 +1,9 @@
-export default function Acceuil() {
+
+export default function Page() {
   return (
-    <div>
-      <h1 className="">salut</h1>
-    </div>
+   <div>
+    <a href="about">z</a>
+   </div> 
   );
 }
+
