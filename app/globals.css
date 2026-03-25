@@ -21,6 +21,11 @@
   --foreground: #171717;
 }
 
+@theme {
+  --color-header : #2F2C2C;
+  --color-button : #ED6868;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
