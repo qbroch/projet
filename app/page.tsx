@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/HeaderMain";
 import Hero from "./components/Hero";
 
 export default function Page() {

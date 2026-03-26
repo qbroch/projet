@@ -19,9 +19,9 @@ export default function Header() {
                 <Image src={menu} width={32} height={32} alt="menu" className="pt-1"></Image>
             </button>
           </div>
-          <Link href={"/"}>
+          <Link href={"/contact"}>
               <button className="flex gap-2 p-3 bg-button rounded-xl hover:cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <h2 className="font-Anton text-white">Acceuil</h2>
+                <h2 className="font-Anton text-white">Contacter moi</h2>
               </button>
           </Link>
 
