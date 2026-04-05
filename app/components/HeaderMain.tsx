@@ -21,7 +21,7 @@ export default function Header() {
           </div>
           <Link href={"/contact"}>
               <button className="flex gap-2 p-3 bg-button rounded-xl hover:cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <h2 className="font-Anton text-white">Contacter moi</h2>
+                <h2 className="font-Anton text-2xl text-white">Contacter moi</h2>
               </button>
           </Link>
 
