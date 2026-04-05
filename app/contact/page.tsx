@@ -13,9 +13,6 @@ type ContactFormData = {
     message : string;
 };
 
-
-
-
 function isFormComplete(data: ContactFormData): boolean {
     return (
         data.nom.trim() !== "" &&
