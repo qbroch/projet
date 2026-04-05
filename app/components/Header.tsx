@@ -14,8 +14,8 @@ export default function Header() {
           
           <Image src={logo} width={64} height={64} alt="logo" className="absolute left-0" />
           <div className="mx-auto">
-            <button className="flex gap-2 p-3 rounded-xl hover:cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105">
-                <h1 className="font-Anton text-white text-3xl">Menu</h1>
+            <button className="flex gap-2 rounded-xl hover:cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <h1 className="font-anton text-white text-3xl">Menu</h1>
                 <Image src={menu} width={32} height={32} alt="menu" className="pt-1"></Image>
             </button>
           </div>

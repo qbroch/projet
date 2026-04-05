@@ -196,8 +196,8 @@ export default function Contact() {
                                 />
                             </div>
                             <div className="flex justify-end">
-                                <button disabled={loading} type="submit" id="submit" className="flex gap-2 p-4 bg-button rounded-xl hover:cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105">
-                                    <h2 className="font-Anton text-white text-4xl">{loading ? "Envoi..." : "Valider"}</h2>
+                                <button disabled={loading} type="submit" id="submit" className="flex gap-2 p-3 bg-button rounded-xl hover:cursor-pointer hover:shadow-xl transition-all duration-300 hover:scale-105">
+                                    <h2 className="font-bold text-white ">{loading ? "Envoi..." : "Valider"}</h2>
                                 </button>
                             </div>
                         </div>
