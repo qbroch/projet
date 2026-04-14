@@ -1,19 +1,21 @@
+import Choice from "./components/Choice";
+import Competence from "./components/Competence";
 import Header from "./components/HeaderMain";
 import Hero from "./components/Hero";
 import APropos from "./components/aPropos";
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-black flex flex-col">
-      <div className="bg-black sticky top-0 z-50 p-4">
+    <div className="flex min-h-screen flex-col bg-black">
+      <header className="sticky top-0 z-50 bg-black p-4">
         <Header />
-      </div>
-      <div>
+      </header>
+      <main>
         <Hero />
-      </div>
-      <div>
         <APropos />
-      </div>
+        <Choice />
+        <Competence />
+      </main>
     </div>
   );
 }

@@ -28,6 +28,7 @@ function isFormComplete(data: ContactFormData): boolean {
 export default function Contact() {
     const [loading , setLoading] = useState(false);
     const [formError, setFormError] = useState<string | null>(null);
+    const [formSuccess, setFormSuccess] = useState<string | null>(null);
     const [formData, setFormData] = useState<ContactFormData>({
         nom: "",
         prenom: "",
@@ -42,6 +43,7 @@ export default function Contact() {
     function handleChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, ) {
         const { name, value } = event.target;
         setFormError(null);
+        setFormSuccess(null);
         setFormData((prev,) => ({
             ...prev,
             [name as keyof ContactFormData]: value,
@@ -53,6 +55,7 @@ export default function Contact() {
     
         setLoading(true);
         setFormError(null);
+        setFormSuccess(null);
 
         if(formData.message.length > 1000 || formData.entreprise.length > 25 || formData.services.length > 25 || formData.telephone.length > 11 || formData.email.length > 50 || formData.prenom.length > 25 || formData.nom.length > 25) {
             setFormError("Le message ne doit pas dépasser 1000 caractères, le nom ne doit pas dépasser 25 caractères, le prénom ne doit pas dépasser 25 caractères, le téléphone ne doit pas dépasser 11 caractères, l'email ne doit pas dépasser 50 caractères, le service ne doit pas dépasser 25 caractères, l'entreprise ne doit pas dépasser 25 caractères");
@@ -81,7 +84,7 @@ export default function Contact() {
                 );
                 return;
             }
-            setFormError("Message envoyé avec succès");
+            setFormSuccess("Message envoye avec succes.");
             setFormData({
                 nom: "",
                 prenom: "",
@@ -105,10 +108,18 @@ export default function Contact() {
             </div>
             <FadeIn delay={600}>
                 <main className="w-full max-w-7xl mx-auto px-6 py-10">
+                    {formSuccess ? (
+                        <p
+                            role="status"
+                            className="mb-6 rounded-xl border-2 border-green-500 px-4 py-3 text-2xl font-bold text-white"
+                        >
+                            {formSuccess}
+                        </p>
+                    ) : null}
                     {formError ? (
                         <p
                             role="alert"
-                            className="mb-6 rounded-xl border-2 border-header  px-4 py-3 text-2xl text-white font-bold"
+                            className="mb-6 rounded-xl border-2 border-red-500 px-4 py-3 text-2xl font-bold text-white"
                         >
                             {formError}
                         </p>

@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   
       if (!data) {
-        return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+        return NextResponse.json({ error: "Le contenu du formulaire est invalide." }, { status: 400 });
       }
   
       if (!emailRegex.test(data.email)) {
@@ -58,6 +58,6 @@ export async function POST(request: Request) {
   
     } catch (error) {
       console.error("[contact] error", error);
-      return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+      return NextResponse.json({ error: "Erreur interne du serveur." }, { status: 500 });
     }
   }

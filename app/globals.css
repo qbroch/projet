@@ -16,6 +16,7 @@
 @theme {
   --color-header : #2F2C2C;
   --color-button : #ED6868;
+  --color-competence : #363636;
   --font-anton: var(--font-anton-google), Arial, Helvetica, sans-serif;
 }
 
